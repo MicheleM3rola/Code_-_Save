@@ -11,7 +11,7 @@ const SnippetsList = (props) => {
     getSnippets,
     deleteSnippet,
     sortedTech,
-    snippetsContent,
+
     handleHeadersRequest,
   } = useContext(SnippetContext);
 

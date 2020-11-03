@@ -11,9 +11,7 @@ import { UserContext } from "./Context";
 export const ProfileContext = createContext();
 
 const ProfileContextProvider = ({ children }) => {
-  {
-    /** Profile State with React hook form and post request  Create Profile*/
-  }
+  /** Profile State with React hook form and post request  Create Profile*/
 
   const { register, handleSubmit, reset } = useForm();
   const { userData } = useContext(UserContext);
@@ -28,9 +26,7 @@ const ProfileContextProvider = ({ children }) => {
     await getProfileData();
   };
 
-  {
-    /** Get request Profile Data with state to store the data */
-  }
+  /** Get request Profile Data with state to store the data */
 
   const [profileData, setProfileData] = useState([]);
 
@@ -52,9 +48,7 @@ const ProfileContextProvider = ({ children }) => {
     getProfileData();
   }, [userData.token, getProfileData]);
 
-  {
-    /**EditingProfile GET */
-  }
+  /**EditingProfile GET */
 
   const editProfile = useCallback(async () => {
     try {
@@ -80,9 +74,7 @@ const ProfileContextProvider = ({ children }) => {
     }
   }, [userData.token, reset]);
 
-  {
-    /** Edit Sumbit Profile */
-  }
+  /** Edit Sumbit Profile */
 
   const idProfile = profileData.map((obj) => obj._id).join("");
 
@@ -100,9 +92,8 @@ const ProfileContextProvider = ({ children }) => {
     await getProfileData();
   };
 
-  {
-    /** Delete Profile */
-  }
+  /** Delete Profile */
+
   const deleteProfile = async (id) => {
     try {
       await Axios.delete(`http://localhost:5000/createprofile/delete/${id}`, {

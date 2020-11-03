@@ -22,16 +22,12 @@ const EditSnippet = (props) => {
     setContentEdit(content);
   };
 
-  {
-    /** TOKEN FROM USERCONTEXT */
-  }
+  /** TOKEN FROM USERCONTEXT */
 
   const handleHeadersRequest = localStorage.getItem("auth-token");
   const history = useHistory();
 
-  {
-    /** USEEFFECT TO RETRIEVE THE SINGLE SNIPPET FROM THE DATABASE */
-  }
+  /** USEEFFECT TO RETRIEVE THE SINGLE SNIPPET FROM THE DATABASE */
 
   const { id } = useParams();
 
@@ -49,9 +45,7 @@ const EditSnippet = (props) => {
       .catch((err) => console.log(err));
   }, [handleHeadersRequest, id]);
 
-  {
-    /** HANDLESUBMIT */
-  }
+  /** HANDLESUBMIT */
 
   const handleSubmit = async (e) => {
     e.preventDefault();

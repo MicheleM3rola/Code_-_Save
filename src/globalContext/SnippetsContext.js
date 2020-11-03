@@ -29,9 +29,7 @@ const SnippetContextProvider = ({ children }) => {
     setTech(e.target.value.toUpperCase());
   };
 
-  {
-    /** Editor state */
-  }
+  /** Editor state */
 
   const [content, setContent] = useState("");
 

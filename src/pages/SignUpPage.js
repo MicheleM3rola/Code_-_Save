@@ -1,7 +1,7 @@
 import React from "react";
 import BgSection from "../assets/section2Wave";
 import Signup from "../components/signup/signup";
-import { renderToStaticMarkup } from "react-dom/server";
+
 import Grid from "@material-ui/core/Grid";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
@@ -47,7 +47,7 @@ const useStyles = makeStyles((theme) => ({
     color: "black",
     border: "none",
     boxShadow: "none",
-    padding: "8px",
+
     padding: "20px",
   },
   toolbar: {
@@ -76,7 +76,7 @@ const useStyles = makeStyles((theme) => ({
 
 const SignUpPage = () => {
   const classes = useStyles();
-  const svgString = encodeURIComponent(renderToStaticMarkup(<BgSection />));
+
   return (
     <div>
       <Grid container className={classes.outer}>
