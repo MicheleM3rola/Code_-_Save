@@ -1,0 +1,73 @@
+.sectionProfile {
+  border: solid 1px purple;
+  border-left: none;
+  border-top: none;
+  border-right: none;
+
+  width: 100%;
+}
+.sectionSnippets {
+  padding: 25px;
+}
+
+.displayList {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+/* Card Style*/
+
+.card {
+  width: auto;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 0.5px solid black;
+  border-radius: 10px;
+  margin-top: 8px;
+  margin-left: 8px;
+  -webkit-box-shadow: 0px 10px 23px 1px rgba(219, 178, 219, 1);
+  -moz-box-shadow: 0px 10px 23px 1px rgba(219, 178, 219, 1);
+  box-shadow: 0px 10px 23px 1px rgba(219, 178, 219, 1);
+  background-color: black;
+}
+
+.cardHead {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 30px;
+}
+
+.cardAction {
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.noSnippets {
+  opacity: 0.3;
+  text-align: center;
+  text-transform: capitalize;
+  width: 100%;
+  margin-top: 150px;
+}
+
+.cardHead p {
+  font-size: 0.9rem;
+  font-family: monospace;
+}
+
+.cardHead h1 {
+  font-family: monospace;
+  font-size: 2rem;
+  color: white;
+}

@@ -1,0 +1,14 @@
+.container {
+  width: 80%;
+  margin: auto;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container h1 {
+  margin-top: 60px;
+  padding: 30px;
+}

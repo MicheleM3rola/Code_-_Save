@@ -1,0 +1,80 @@
+.form-resources {
+  width: 100%;
+}
+
+.form-controll {
+  display: flex;
+  flex-direction: row;
+
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  width: 80%;
+}
+
+.input-controll {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 10px;
+  width: 100%;
+  padding: 15px;
+  font-family: monospace;
+  font-size: 1.3rem;
+}
+
+.btn-cont {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 20px;
+  width: 100%;
+}
+
+.btn-cont input {
+  padding: 13px;
+  width: 10%;
+  background-color: purple;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.input-controll input {
+  padding: 15px;
+  width: 80%;
+  border: 2px solid black;
+  border-radius: 10px;
+}
+
+.input-controll label {
+  color: purple;
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 80%;
+  margin: auto;
+  font-family: monospace;
+}
+
+td,
+th {
+  border: 1px solid purple;
+  text-align: left;
+  padding: 8px;
+  font-size: 1rem;
+}
+
+.delete-btn {
+  width: 5%;
+  text-align: center;
+}
+
+.bin {
+  font-size: 1.5rem;
+  color: red;
+}

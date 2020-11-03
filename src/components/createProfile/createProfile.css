@@ -1,0 +1,46 @@
+.form-control-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-control-container h1 {
+  font-family: monospace;
+}
+
+.form-controll-profile {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 30px;
+}
+
+.flex-style-block {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 10px;
+  font-family: monospace;
+  font-size: 1.5rem;
+  width: 100%;
+}
+.flex-style-block label {
+  padding: 8px 0px;
+}
+.flex-style-block input {
+  width: 100%;
+  padding: 7px;
+}
+.flex-style-block input::placeholder {
+  font-family: monospace;
+  color: orange;
+  opacity: 0.5;
+}
+
+.flex-style-block input:focus::placeholder {
+  color: white;
+}
