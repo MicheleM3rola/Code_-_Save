@@ -19,9 +19,10 @@ const useStyles = makeStyles((theme) => ({
     border: "2px solid black",
     boxShadow: theme.shadows[5],
     padding: theme.spacing(2, 4, 3),
-    height: "80%",
+    maxHeight: "80%",
     width: "70%",
     borderRadius: "15px",
+    overflowY: "scroll",
   },
 }));
 
