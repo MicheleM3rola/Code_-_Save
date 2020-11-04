@@ -14,11 +14,15 @@ const ResourceContextProvider = ({ children }) => {
 
   const submitResource = async (data) => {
     try {
-      await Axios.post("http://localhost:5000/resource/create", data, {
-        headers: {
-          "x-auth-token": userData.token,
-        },
-      });
+      await Axios.post(
+        "https://codsaveapp.herokuapp.com/resource/create",
+        data,
+        {
+          headers: {
+            "x-auth-token": userData.token,
+          },
+        }
+      );
 
       reset({
         resource: "",
@@ -36,7 +40,7 @@ const ResourceContextProvider = ({ children }) => {
 
   const getResources = useCallback(async () => {
     try {
-      const res = await Axios.get("http://localhost:5000/resource", {
+      const res = await Axios.get("https://codsaveapp.herokuapp.com/resource", {
         headers: {
           "x-auth-token": userData.token,
         },
@@ -52,11 +56,14 @@ const ResourceContextProvider = ({ children }) => {
 
   const deleteResource = async (id) => {
     try {
-      await Axios.delete(`http://localhost:5000/resource/delete/${id}`, {
-        headers: {
-          "x-auth-token": userData.token,
-        },
-      });
+      await Axios.delete(
+        `https://codsaveapp.herokuapp.com/resource/delete/${id}`,
+        {
+          headers: {
+            "x-auth-token": userData.token,
+          },
+        }
+      );
 
       return setResources(resources.filter((el) => el._id !== id));
     } catch (err) {

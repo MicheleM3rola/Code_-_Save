@@ -30,7 +30,7 @@ const UserContextProvider = ({ children }) => {
         /** WE CALL TO CHECK IF THERE IS A TOKE OR IS A VALID TOKEN */
 
         const tokenRes = await Axios.post(
-          "http://localhost:5000/users/tokenIsValid",
+          "https://codsaveapp.herokuapp.com/users/tokenIsValid",
           null,
           {
             headers: {
@@ -43,11 +43,14 @@ const UserContextProvider = ({ children }) => {
       THE DATABASE */
 
         if (tokenRes.data) {
-          const userRes = await Axios.get("http://localhost:5000/users/", {
-            headers: {
-              "x-auth-token": token,
-            },
-          });
+          const userRes = await Axios.get(
+            "https://codsaveapp.herokuapp.com/users/",
+            {
+              headers: {
+                "x-auth-token": token,
+              },
+            }
+          );
           setUserData({
             token: token,
             user: userRes.data,
@@ -73,7 +76,7 @@ const UserContextProvider = ({ children }) => {
       const loginUser = { emails, passwords };
 
       const userResLog = await Axios.post(
-        "http://localhost:5000/users/login",
+        "https://codsaveapp.herokuapp.com/users/login",
         loginUser
       );
 
@@ -114,14 +117,20 @@ SETTING THE TOKEN IN THE LOCAL STORAGE AND USING THE USEhISTORY TO GO TO THE HOM
 
       const newUser = { email, password, passwordCheck, displayName };
 
-      await Axios.post("http://localhost:5000/users/register", newUser);
+      await Axios.post(
+        "https://codsaveapp.herokuapp.com/users/register",
+        newUser
+      );
 
       /**loginRes used to login straight to the home page */
 
-      const loginRes = await Axios.post("http://localhost:5000/users/login", {
-        emails: email,
-        passwords: password,
-      });
+      const loginRes = await Axios.post(
+        "https://codsaveapp.herokuapp.com/users/login",
+        {
+          emails: email,
+          passwords: password,
+        }
+      );
 
       setUserData({
         token: loginRes.data.token,

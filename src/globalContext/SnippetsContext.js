@@ -49,7 +49,7 @@ const SnippetContextProvider = ({ children }) => {
       title,
     };
 
-    await Axios.post("http://localhost:5000/snippets/", variables, {
+    await Axios.post("https://codsaveapp.herokuapp.com/snippets/", variables, {
       headers: {
         "x-auth-token": handleHeadersRequest,
       },
@@ -67,11 +67,14 @@ const SnippetContextProvider = ({ children }) => {
 
   const getSnippets = useCallback(async () => {
     try {
-      const res = await Axios.get("http://localhost:5000/snippets/all", {
-        headers: {
-          "x-auth-token": handleHeadersRequest,
-        },
-      });
+      const res = await Axios.get(
+        "https://codsaveapp.herokuapp.com/snippets/all",
+        {
+          headers: {
+            "x-auth-token": handleHeadersRequest,
+          },
+        }
+      );
 
       const content = res.data;
 
@@ -84,11 +87,14 @@ const SnippetContextProvider = ({ children }) => {
 
   const deleteSnippet = async (id) => {
     try {
-      await Axios.delete(`http://localhost:5000/snippets/snippet/${id}`, {
-        headers: {
-          "x-auth-token": handleHeadersRequest,
-        },
-      });
+      await Axios.delete(
+        `https://codsaveapp.herokuapp.com/snippets/snippet/${id}`,
+        {
+          headers: {
+            "x-auth-token": handleHeadersRequest,
+          },
+        }
+      );
 
       setSnippetsContent(snippetsContent.filter((el) => el._id !== id));
       setSortedTech(sortedTech.filter((el) => el._id !== id));

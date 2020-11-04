@@ -15,7 +15,7 @@ const ReadMore = () => {
   const { id } = useParams();
 
   useEffect(() => {
-    Axios.get(`http://localhost:5000/snippets/${id}`, {
+    Axios.get(`https://codsaveapp.herokuapp.com/snippets/${id}`, {
       headers: {
         "x-auth-token": handleHeadersRequest,
       },

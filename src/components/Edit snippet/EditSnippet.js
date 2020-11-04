@@ -32,7 +32,7 @@ const EditSnippet = (props) => {
   const { id } = useParams();
 
   useEffect(() => {
-    Axios.get(`http://localhost:5000/snippets/${id}`, {
+    Axios.get(`https://codsaveapp.herokuapp.com/snippets/${id}`, {
       headers: {
         "x-auth-token": handleHeadersRequest,
       },
@@ -57,7 +57,7 @@ const EditSnippet = (props) => {
     };
 
     await Axios.post(
-      `http://localhost:5000/snippets/update/${id}`,
+      `https://codsaveapp.herokuapp.com/snippets/update/${id}`,
       editedSnippet,
       {
         headers: {
