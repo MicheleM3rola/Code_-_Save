@@ -13,6 +13,7 @@ const useStyles = makeStyles((theme) => ({
     width: "100px",
     height: "20px",
     fontSize: "0.5rem",
+    marginBottom: "20px",
   },
   button: {
     marginRight: "8px",
