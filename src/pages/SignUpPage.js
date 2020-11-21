@@ -1,4 +1,5 @@
 import React from "react";
+import { Redirect } from "react-router-dom";
 import BgSection from "../assets/section2Wave";
 import Signup from "../components/signup/signup";
 
@@ -76,6 +77,12 @@ const useStyles = makeStyles((theme) => ({
 
 const SignUpPage = () => {
   const classes = useStyles();
+
+  const isAuth = localStorage.getItem("auth-token");
+
+  if (isAuth) {
+    return <Redirect to="/home" />;
+  }
 
   return (
     <div>
