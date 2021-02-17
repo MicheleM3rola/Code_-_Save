@@ -75,26 +75,33 @@ const EditSnippet = (props) => {
   };
 
   return (
-    <div className="">
-      <h1> Update your Snippet</h1>
+    <div className="ctnEdit">
+      <h1 className="titleEdit"> Update Your Snippet</h1>
 
-      <form onSubmit={handleSubmit} className="">
-        <label htmlFor="tech">Technologie</label>
-        <input
-          type="text"
-          value={techEdit}
-          id="tech"
-          onChange={handleChangeTechEdit}
-        />
-        <label htmlFor="titleSnippet">Title</label>
-        <input
-          type="text"
-          value={titleEdit}
-          id="titleSnippet"
-          onChange={handleChangeTitleEdit}
-        />
+      <form onSubmit={handleSubmit} className="editForm">
+        <div className="innerInput">
+          <div className="editInput">
+            <label htmlFor="tech">Technologie</label>
+            <input
+              type="text"
+              value={techEdit}
+              id="tech"
+              onChange={handleChangeTechEdit}
+            />
+          </div>
+          <div className="editInput">
+            <label htmlFor="titleSnippet">Title</label>
+            <input
+              type="text"
+              value={titleEdit}
+              id="titleSnippet"
+              onChange={handleChangeTitleEdit}
+            />
+          </div>
+        </div>
+
         <Editor content={contentEdit} handleChange={handleChangeContentEdit} />
-        <input type="submit" value="Update Snippet" />
+        <input type="submit" value="Update Snippet" className="btn-edit" />
       </form>
     </div>
   );
