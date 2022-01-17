@@ -1,7 +1,7 @@
 # Code_Save App
 
 <img align="left" width="50%" src="https://res.cloudinary.com/mike88/image/upload/v1642426813/codeSave2_p2vgvo.jpg" title="CodeSave" alt="CodeSave" width="40%"/>
-<img align="left" width="420" src="https://res.cloudinary.com/mike88/image/upload/v1642426806/CodeSave_hhiboy.jpg" title="CodeSave" alt="CodeSave" width="40%"/>
+<img align="left" width="350" src="https://res.cloudinary.com/mike88/image/upload/v1642426806/CodeSave_hhiboy.jpg" title="CodeSave" alt="CodeSave" width="40%"/>
 <br /><br /><br /><br /><br /><br /> <br /><br /><br /><br /><br /><br /><br /><br />
 
 Code_&_Save is a Full-Stack MERN application built to save my code snippets and resources to learn found on the web. The app is built with React for The UI usign Context Api to manage the state and is Styled very minimal with CSS3 and Material UI.
