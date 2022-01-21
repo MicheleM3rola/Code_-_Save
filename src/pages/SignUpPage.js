@@ -1,6 +1,6 @@
 import React from "react";
 import { Redirect } from "react-router-dom";
-import BgSection from "../assets/section2Wave";
+
 import Signup from "../components/signup/signup";
 
 import Grid from "@material-ui/core/Grid";
@@ -19,7 +19,7 @@ const useStyles = makeStyles((theme) => ({
 
   outer: {
     backgroundColor: "#eeeeee",
-    height: "100%",
+    height: "100vh",
   },
 
   title: {
@@ -62,7 +62,7 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "center",
   },
   sectionTwo: {
-    height: "100vh",
+    height: "100%",
     width: "100%",
   },
   service: {
@@ -110,16 +110,6 @@ const SignUpPage = () => {
         </Grid>
         <Grid item xs={12} sm={6} className={classes.slogan}>
           <Signup />
-        </Grid>
-      </Grid>
-      <Grid container>
-        <Grid item xs={12} sm={12} className={classes.sectionTwo}>
-          <BgSection />
-          <div>
-            <Typography variant="h3" className={classes.service}>
-              Unlock Your Space
-            </Typography>
-          </div>
         </Grid>
       </Grid>
     </div>
